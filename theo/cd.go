@@ -1,4 +1,4 @@
-package builtin
+package theo
 
 import (
 	"os"
@@ -10,7 +10,7 @@ func Cd(args []string) error {
 	if len(args) == 0 {
 		path = os.Getenv("HOME")
 	} else {
-		path = args[1]
+		path = args[0]
 	}
 	return os.Chdir(path)
 }
